@@ -326,6 +326,141 @@
             margin-bottom: 20px;
             font-size: 16px;
         }
+
+        /* ===== OUR CLIENTS CAROUSEL ===== */
+        .clients-section {
+            padding: 60px 0 70px;
+            background: #f8f9fa;
+            overflow: hidden;
+        }
+
+        .clients-section .section-title {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .clients-subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        .clients-track-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            /* fade edges */
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        }
+
+        .clients-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: clientsScroll 32s linear infinite;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .clients-track:active {
+            cursor: grabbing;
+        }
+
+        .clients-track.paused {
+            animation-play-state: paused;
+        }
+
+        @keyframes clientsScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .client-card {
+            flex: 0 0 auto;
+            width: 160px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 22px 16px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .client-logo-wrap {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        /* Placeholder color blocks — ganti dengan <img> saat punya logo */
+        .client-logo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Fallback initials badge jika belum ada logo */
+        .client-initial {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .client-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Warna initial badges */
+        .ci-red    { background: linear-gradient(135deg,#D62828,#f25f5c); }
+        .ci-blue   { background: linear-gradient(135deg,#185FA5,#378ADD); }
+        .ci-green  { background: linear-gradient(135deg,#3B6D11,#639922); }
+        .ci-amber  { background: linear-gradient(135deg,#854F0B,#BA7517); }
+        .ci-purple { background: linear-gradient(135deg,#534AB7,#7F77DD); }
+        .ci-teal   { background: linear-gradient(135deg,#0F6E56,#1D9E75); }
+        .ci-coral  { background: linear-gradient(135deg,#993C1D,#D85A30); }
+        .ci-pink   { background: linear-gradient(135deg,#993556,#D4537E); }
+        .ci-navy   { background: linear-gradient(135deg,#042C53,#185FA5); }
+        .ci-dark   { background: linear-gradient(135deg,#2C2C2A,#5F5E5A); }
+        .ci-maroon { background: linear-gradient(135deg,#501313,#A32D2D); }
+
+        @media (max-width: 768px) {
+            .client-card { width: 130px; padding: 18px 12px 14px; }
+            .client-initial, .client-logo-wrap { width: 52px; height: 52px; border-radius: 10px; font-size: 16px; }
+            .clients-track { gap: 16px; }
+            @keyframes clientsScroll {
+                0%   { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+        }
+        /* ===== END OUR CLIENTS ===== */
         
         /* Contact Section */
         .contact {
@@ -808,6 +943,114 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
         </div>
     </section>
 
+    <!-- ===== OUR CLIENTS SECTION ===== -->
+    <section class="clients-section">
+        <div class="section-title">
+            <h2>OUR CLIENTS</h2>
+        </div>
+        <p class="clients-subtitle">Dipercaya oleh berbagai instansi, sekolah, dan perusahaan terkemuka</p>
+
+        <div class="clients-track-wrapper" id="clientsWrapper">
+            <div class="clients-track" id="clientsTrack">
+
+                <!-- SET 1 (asli) -->
+                <div class="client-card">
+                    <!-- Ganti div di bawah dengan: <img src="logo-kawunganten.png"> jika sudah punya logo -->
+                   <img src="CILACAP.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Kec. Kawunganten, Kab. Cilacap</span>
+                </div>
+                <div class="client-card">
+                  <img src="PERTAMINA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Pertamina</span>
+                </div>
+                <div class="client-card">
+                  <img src="logo anugrah computer.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Computer</span>
+                </div>
+                <div class="client-card">
+                  <img src="logo anugrah sound.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Soundsystem</span>
+                </div>
+                <div class="client-card">
+                 <img src="ANUGRAH MUSIK.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Musik</span>
+                </div>
+                <div class="client-card">
+                 <img src="DUNEX.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Dunia Express Transindo</span>
+                </div>
+                <div class="client-card">
+                <img src="SPPG.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SPPG</span>
+                </div>
+                <div class="client-card">
+                    <img src="UI.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Universitas Indonesia</span>
+                </div>
+                <div class="client-card">
+                <img src="SMK TI.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Tarbiyatul Islam Kawunganten</span>
+                </div>
+                <div class="client-card">
+                  <img src="SMANSABA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMA Negeri 1 Bantarsari</span>
+                </div>
+                <div class="client-card">
+                <img src="YAYASAN BUDUT.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Boedi Utomo Cilacap</span>
+                </div>
+
+                <!-- SET 2 (duplikat untuk infinite loop mulus) -->
+                <div class="client-card">
+               <img src="CILACAP.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Kec. Kawunganten, Kab. Cilacap</span>
+                </div>
+                <div class="client-card">
+                <img src="PERTAMINA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Pertamina</span>
+                </div>
+                <div class="client-card">
+                <img src="logo anugrah computer.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Computer</span>
+                </div>
+                <div class="client-card">
+                <img src="logo anugrah sound.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Soundsystem</span>
+                </div>
+                <div class="client-card">
+                 <img src="ANUGRAH MUSIK.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Musik</span>
+                </div>
+                <div class="client-card">
+                 <img src="DUNEX.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Dunia Express Transindo</span>
+                </div>
+                <div class="client-card">
+               <img src="SPPG.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SPPG</span>
+                </div>
+                <div class="client-card">
+                <img src="UI.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Universitas Indonesia</span>
+                </div>
+                <div class="client-card">
+               <img src="SMK TI.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Tarbiyatul Islam Kawunganten</span>
+                </div>
+                <div class="client-card">
+                 <img src="SMANSABA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMA Negeri 1 Bantarsari</span>
+                </div>
+                <div class="client-card">
+               <img src="YAYASAN BUDUT.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Boedi Utomo Cilacap</span>
+                </div>
+
+            </div><!-- end .clients-track -->
+        </div><!-- end .clients-track-wrapper -->
+    </section>
+    <!-- ===== END OUR CLIENTS ===== -->
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container contact-container">
@@ -1005,11 +1248,56 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
         if (waBtn && waTooltip) {
             waBtn.addEventListener('mouseenter', () => waTooltip.classList.add('show'));
             waBtn.addEventListener('mouseleave', () => waTooltip.classList.remove('show'));
-            // Auto tampil tooltip setelah 2 detik, lalu hilang
             setTimeout(() => {
                 waTooltip.classList.add('show');
                 setTimeout(() => waTooltip.classList.remove('show'), 3000);
             }, 2000);
+        }
+
+        // ===== CLIENTS CAROUSEL: drag to scroll + pause on hover =====
+        const track = document.getElementById('clientsTrack');
+        if (track) {
+            // Pause animation on hover/focus
+            track.addEventListener('mouseenter', () => track.classList.add('paused'));
+            track.addEventListener('mouseleave', () => { if (!isDragging) track.classList.remove('paused'); });
+
+            // Drag to scroll (mouse)
+            let isDragging = false, startX = 0, scrollLeft = 0, dragOffset = 0;
+
+            track.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                dragOffset = 0;
+                track.classList.add('paused');
+                track.style.animationPlayState = 'paused';
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                dragOffset = e.clientX - startX;
+                // Shift the element via CSS variable
+                track.style.setProperty('--drag-x', dragOffset + 'px');
+            });
+            document.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                track.classList.remove('paused');
+                track.style.setProperty('--drag-x', '0px');
+            });
+
+            // Touch support for mobile
+            let touchStartX = 0;
+            track.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                track.classList.add('paused');
+            }, { passive: true });
+            track.addEventListener('touchmove', (e) => {
+                const diff = e.touches[0].clientX - touchStartX;
+                track.style.setProperty('--drag-x', diff + 'px');
+            }, { passive: true });
+            track.addEventListener('touchend', () => {
+                track.classList.remove('paused');
+                track.style.setProperty('--drag-x', '0px');
+            });
         }
     });
     </script>
