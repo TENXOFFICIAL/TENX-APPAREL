@@ -64,6 +64,7 @@
         .nav-links {
             display: flex;
             gap: 30px;
+            align-items: center;
         }
         
         .nav-links a {
@@ -78,6 +79,30 @@
         
         .nav-links a:hover {
             color: var(--accent);
+        }
+
+        /* Special Offer nav button */
+        .nav-offer-btn {
+            background-color: var(--accent) !important;
+            color: var(--secondary) !important;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 14px !important;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            transition: all 0.3s;
+            animation: offerPulse 2.4s infinite;
+        }
+        .nav-offer-btn:hover {
+            background-color: transparent !important;
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+        @keyframes offerPulse {
+            0%   { box-shadow: 0 0 0 0 rgba(214,40,40,0.5); }
+            70%  { box-shadow: 0 0 0 8px rgba(214,40,40,0); }
+            100% { box-shadow: 0 0 0 0 rgba(214,40,40,0); }
         }
         
         /* Hero Section */
@@ -350,7 +375,6 @@
             position: relative;
             width: 100%;
             overflow: hidden;
-            /* fade edges */
             -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
             mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
         }
@@ -408,14 +432,12 @@
             flex-shrink: 0;
         }
 
-        /* Placeholder color blocks — ganti dengan <img> saat punya logo */
         .client-logo-wrap img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
 
-        /* Fallback initials badge jika belum ada logo */
         .client-initial {
             width: 64px;
             height: 64px;
@@ -438,7 +460,6 @@
             line-height: 1.4;
         }
 
-        /* Warna initial badges */
         .ci-red    { background: linear-gradient(135deg,#D62828,#f25f5c); }
         .ci-blue   { background: linear-gradient(135deg,#185FA5,#378ADD); }
         .ci-green  { background: linear-gradient(135deg,#3B6D11,#639922); }
@@ -671,9 +692,10 @@
         .nav-links { gap: 24px; }
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
-            .nav-links { display: none; position: absolute; top: 68px; right: 18px; background: var(--secondary); flex-direction: column; width: 220px; border-radius: 8px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+            .nav-links { display: none; position: absolute; top: 68px; right: 18px; background: var(--secondary); flex-direction: column; width: 220px; border-radius: 8px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); align-items: stretch; }
             .nav-links.show { display: flex; }
             .nav-links a { padding: 10px 6px; border-radius: 6px; }
+            .nav-offer-btn { text-align: center; margin-top: 4px; }
             .hero-content h1 { font-size: 36px; }
             .hero-content p { font-size: 15px; }
             .category-img, .product-img { height: 220px; }
@@ -770,6 +792,7 @@
                 <a href="#products">Produk</a>
                 <a href="#about">Tentang</a>
                 <a href="#contact">Kontak</a>
+                <a href="promo.html" class="nav-offer-btn">🔥 Special Offer</a>
             </div>
         </div>
     </nav>
@@ -925,7 +948,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="container" id="about">
         <div class="section-title">
             <h2>TENTANG KAMI</h2>
@@ -953,9 +975,7 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
         <div class="clients-track-wrapper" id="clientsWrapper">
             <div class="clients-track" id="clientsTrack">
 
-                <!-- SET 1 (asli) -->
                 <div class="client-card">
-                    <!-- Ganti div di bawah dengan: <img src="logo-kawunganten.png"> jika sudah punya logo -->
                    <img src="CILACAP.png" style="width:64px;height:64px;object-fit:contain;">
                     <span class="client-name">Kec. Kawunganten, Kab. Cilacap</span>
                 </div>
@@ -1000,7 +1020,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
                     <span class="client-name">SMK Boedi Utomo Cilacap</span>
                 </div>
 
-                <!-- SET 2 (duplikat untuk infinite loop mulus) -->
                 <div class="client-card">
                <img src="CILACAP.png" style="width:64px;height:64px;object-fit:contain;">
                     <span class="client-name">Kec. Kawunganten, Kab. Cilacap</span>
@@ -1046,8 +1065,8 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
                     <span class="client-name">SMK Boedi Utomo Cilacap</span>
                 </div>
 
-            </div><!-- end .clients-track -->
-        </div><!-- end .clients-track-wrapper -->
+            </div>
+        </div>
     </section>
     <!-- ===== END OUR CLIENTS ===== -->
 
@@ -1169,13 +1188,11 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Hero stagger
         const hero = document.querySelector('.hero-content');
         if (hero) {
             setTimeout(() => { hero.classList.add('show'); }, 300);
         }
 
-        // Scroll reveal
         const revealElements = document.querySelectorAll('.fade-in-up, .section-title');
         const revealOnScroll = () => {
             const triggerBottom = window.innerHeight * 0.85;
@@ -1187,7 +1204,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
         window.addEventListener('scroll', revealOnScroll);
         revealOnScroll();
 
-        // Product hover image zoom
         document.querySelectorAll('.product-card').forEach(card => {
             const img = card.querySelector('.product-img');
             if (!img) return;
@@ -1201,7 +1217,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
             card.addEventListener('mouseleave', () => { img.style.transform = 'scale(1)'; });
         });
 
-        // Hamburger menu toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         if (menuToggle && navLinks) {
@@ -1215,7 +1230,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
             });
         }
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -1231,7 +1245,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
             });
         });
 
-        // Accessibility: menu toggle via Enter/Space
         if (menuToggle) {
             menuToggle.setAttribute('tabindex', '0');
             menuToggle.addEventListener('keydown', (e) => {
@@ -1242,7 +1255,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
             });
         }
 
-        // WhatsApp tooltip
         const waBtn = document.getElementById('waBtn');
         const waTooltip = document.getElementById('waTooltip');
         if (waBtn && waTooltip) {
@@ -1254,14 +1266,11 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
             }, 2000);
         }
 
-        // ===== CLIENTS CAROUSEL: drag to scroll + pause on hover =====
         const track = document.getElementById('clientsTrack');
         if (track) {
-            // Pause animation on hover/focus
             track.addEventListener('mouseenter', () => track.classList.add('paused'));
             track.addEventListener('mouseleave', () => { if (!isDragging) track.classList.remove('paused'); });
 
-            // Drag to scroll (mouse)
             let isDragging = false, startX = 0, scrollLeft = 0, dragOffset = 0;
 
             track.addEventListener('mousedown', (e) => {
@@ -1274,7 +1283,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
             document.addEventListener('mousemove', (e) => {
                 if (!isDragging) return;
                 dragOffset = e.clientX - startX;
-                // Shift the element via CSS variable
                 track.style.setProperty('--drag-x', dragOffset + 'px');
             });
             document.addEventListener('mouseup', () => {
@@ -1284,7 +1292,6 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
                 track.style.setProperty('--drag-x', '0px');
             });
 
-            // Touch support for mobile
             let touchStartX = 0;
             track.addEventListener('touchstart', (e) => {
                 touchStartX = e.touches[0].clientX;
