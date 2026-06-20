@@ -167,6 +167,24 @@
             background-color: transparent;
             color: var(--accent);
         }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .cta-button-outline {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .cta-button-outline:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border-color: var(--secondary);
+        }
         
         /* Categories Section */
         .section-title {
@@ -528,6 +546,46 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+
+        .contact-map {
+            position: relative;
+            min-height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            text-decoration: none;
+        }
+
+        .map-link iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+        }
+
+        .map-overlay {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+            color: var(--secondary);
+            padding: 30px 20px 16px;
+            font-weight: 700;
+            font-size: 15px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .map-link:hover .map-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(214,40,40,0.85) 100%);
+        }
         
         .form-group {
             margin-bottom: 20px;
@@ -813,7 +871,10 @@ Apa aja sih Bonusnya?
 Pokoknya, #CustomTanpaRibet cuma di TenX!
 
 </p>
-                <a href="#products" class="cta-button">Explor Koleksi</a>
+                <div class="hero-buttons">
+                    <a href="#products" class="cta-button">Explor Koleksi</a>
+                    <a href="partner-tenx.html" class="cta-button cta-button-outline">🤝 Partner TenX</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1096,26 +1157,16 @@ Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Nama</label>
-                        <input type="text" id="name" required>
+            <div class="contact-map">
+                <a href="https://share.google/JRFPdKcgVHHkKdMk1" target="_blank" rel="noopener noreferrer" class="map-link">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Workshop%20TenX%20Apparel&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-overlay">
+                        <span>📍 Lihat Lokasi Workshop di Google Maps</span>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">No. Handphone</label>
-                        <input type="tel" id="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Pesan</label>
-                        <textarea id="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Kirim Pesan</button>
-                </form>
+                </a>
             </div>
         </div>
     </section>
