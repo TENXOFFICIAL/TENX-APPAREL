@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Offer - TENX APPAREL</title>
+<style>
+    :root {
+        --primary: #000000;
+        --secondary: #FFFFFF;
+        --accent: #D62828;
+        --highlight: #F25F5C;
+        --light-bg: #F8F9FA;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
+    body { background:var(--secondary); color:var(--primary); line-height:1.6; overflow-x:hidden; }
+    .container { max-width:1300px; margin:0 auto; padding:0 20px; }
+
+    /* Top bar */
+    .topbar {
+        background:var(--secondary);
+        padding:18px 0;
+        position:fixed;
+        width:100%;
+        top:0;
+        box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        z-index:1000;
+    }
+    .topbar .container { display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:24px; font-weight:900; text-transform:uppercase; letter-spacing:2px; }
+    .logo span { color:var(--accent); }
+    .back-link {
+        text-decoration:none;
+        color:var(--secondary);
+        font-weight:700;
+        font-size:13px;
+        text-transform:uppercase;
+        letter-spacing:0.5px;
+        display:flex;
+        align-items:center;
+        gap:8px;
+        background:var(--primary);
+        padding:10px 18px;
+        border-radius:30px;
+        border:2px solid var(--primary);
+        transition:all 0.3s;
+    }
+    .back-link:hover {
+        background:transparent;
+        color:var(--primary);
+    }
+    .back-link svg { width:14px; height:14px; fill:currentColor; flex-shrink:0; }
+
+    /* Hero */
+    .promo-hero {
+        padding:150px 0 50px;
+        text-align:center;
+        background:
+            radial-gradient(circle at 20% 20%, rgba(214,40,40,0.08), transparent 50%),
+            radial-gradient(circle at 80% 0%, rgba(242,95,92,0.10), transparent 50%),
+            var(--secondary);
+    }
+    .promo-hero .eyebrow {
+        display:inline-block;
+        background:var(--accent);
+        color:#fff;
+        font-size:12px;
+        font-weight:700;
+        letter-spacing:1.5px;
+        text-transform:uppercase;
+        padding:6px 16px;
+        border-radius:20px;
+        margin-bottom:18px;
+    }
+    .promo-hero h1 {
+        font-size:48px;
+        font-weight:900;
+        text-transform:uppercase;
+        line-height:1.15;
+        margin-bottom:14px;
+    }
+    .promo-hero h1 span { color:var(--accent); }
+    .promo-hero p {
+        max-width:560px;
+        margin:0 auto;
+        font-size:16px;
+        color:#444;
+    }
+
+    /* Promo grid */
+    .promo-grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+        gap:34px;
+        padding:50px 0 90px;
+    }
+
+    .promo-card {
+        background:#fff;
+        border:1px solid #eee;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 6px 22px rgba(0,0,0,0.07);
+        display:flex;
+        flex-direction:column;
+        transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .promo-card:hover {
+        transform:translateY(-6px);
+        box-shadow:0 14px 32px rgba(0,0,0,0.12);
+    }
+
+    .promo-poster-wrap {
+        position:relative;
+        width:100%;
+        aspect-ratio:4/5;
+        background:#f1f1f1;
+        overflow:hidden;
+    }
+    /* Ganti src gambar masing-masing poster di tag <img class="promo-poster"> di bawah */
+    .promo-poster {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
+    }
+    .promo-badge {
+        position:absolute;
+        top:14px;
+        left:14px;
+        background:var(--accent);
+        color:#fff;
+        font-size:12px;
+        font-weight:800;
+        letter-spacing:0.5px;
+        padding:6px 14px;
+        border-radius:20px;
+        text-transform:uppercase;
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .promo-body { padding:24px; display:flex; flex-direction:column; flex:1; }
+    .promo-body h3 {
+        font-size:22px;
+        font-weight:800;
+        text-transform:uppercase;
+        margin-bottom:6px;
+    }
+    .promo-price {
+        color:var(--accent);
+        font-weight:700;
+        font-size:15px;
+        margin-bottom:14px;
+    }
+    .promo-price .old {
+        color:#999;
+        text-decoration:line-through;
+        font-weight:500;
+        margin-right:8px;
+        font-size:14px;
+    }
+
+    .benefit-list { list-style:none; margin-bottom:22px; flex:1; }
+    .benefit-list li {
+        display:flex;
+        align-items:flex-start;
+        gap:8px;
+        font-size:14px;
+        color:#333;
+        margin-bottom:8px;
+    }
+    .benefit-list li::before {
+        content:'✔';
+        color:var(--accent);
+        font-weight:800;
+        flex-shrink:0;
+        margin-top:1px;
+    }
+
+    .promo-cta {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        background:#25D366;
+        color:#fff;
+        text-decoration:none;
+        font-weight:700;
+        font-size:14px;
+        text-transform:uppercase;
+        letter-spacing:0.5px;
+        padding:13px 18px;
+        border-radius:8px;
+        transition:background 0.3s, transform 0.2s;
+    }
+    .promo-cta:hover { background:#1ebd5a; transform:translateY(-2px); }
+    .promo-cta svg { width:18px; height:18px; fill:#fff; flex-shrink:0; }
+
+    .katalog-cta {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        background:var(--primary);
+        color:#fff;
+        text-decoration:none;
+        font-weight:700;
+        font-size:14px;
+        text-transform:uppercase;
+        letter-spacing:0.5px;
+        padding:13px 18px;
+        border-radius:8px;
+        margin-bottom:10px;
+        transition:background 0.3s, transform 0.2s;
+    }
+    .katalog-cta:hover { background:var(--accent); transform:translateY(-2px); }
+    .katalog-cta svg { width:18px; height:18px; fill:#fff; flex-shrink:0; }
+
+    .cta-btn-row {
+        display:flex;
+        gap:16px;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .portfolio-cta {
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        background:transparent;
+        color:#fff;
+        text-decoration:none;
+        font-weight:700;
+        font-size:14px;
+        text-transform:uppercase;
+        letter-spacing:0.5px;
+        padding:14px 28px;
+        border-radius:8px;
+        border:2px solid #fff;
+        transition:background 0.3s, color 0.3s, transform 0.2s;
+    }
+    .portfolio-cta:hover {
+        background:#fff;
+        color:var(--primary);
+        transform:translateY(-2px);
+    }
+    .portfolio-cta svg { width:16px; height:16px; fill:currentColor; flex-shrink:0; }
+
+    /* Bottom big CTA */
+    .promo-footer-cta {
+        background:var(--primary);
+        color:#fff;
+        text-align:center;
+        padding:70px 20px;
+    }
+    .promo-footer-cta h2 {
+        font-size:32px;
+        font-weight:900;
+        text-transform:uppercase;
+        margin-bottom:14px;
+    }
+    .promo-footer-cta h2 span { color:var(--accent); }
+    .promo-footer-cta p { color:#ccc; margin-bottom:28px; max-width:480px; margin-left:auto; margin-right:auto; }
+    .promo-footer-cta .promo-cta {
+        display:inline-flex;
+        padding:14px 28px;
+        font-size:14px;
+    }
+
+    /* Responsive */
+    @media (max-width:768px) {
+        .promo-hero { padding:120px 0 40px; }
+        .promo-hero h1 { font-size:30px; }
+        .promo-hero p { font-size:14px; padding:0 10px; }
+        .promo-grid { grid-template-columns:1fr; gap:24px; padding:36px 0 60px; }
+        .container { padding:0 16px; }
+        .promo-body { padding:18px; }
+        .promo-footer-cta h2 { font-size:24px; }
+        .cta-btn-row { flex-direction:column; align-items:stretch; }
+        .cta-btn-row .promo-cta, .cta-btn-row .portfolio-cta { width:100%; }
+        .logo { font-size:20px; }
+        .back-link { font-size:11px; padding:8px 14px; gap:6px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+    <div class="container">
+        <div class="logo">TEN<span>X</span></div>
+        <a href="index.html" class="back-link">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            <span class="label">Kembali ke Halaman Utama</span>
+        </a>
+    </div>
+</div>
+
+<section class="promo-hero">
+    <div class="container">
+        <span class="eyebrow">🔥 Penawaran Terbatas</span>
+        <h1>SPECIAL OFFER <span>TENX APPAREL</span></h1>
+        <p>Pilih promo yang paling cocok buat kelas, tim, atau organisasi kamu. Setiap poster punya benefit dan harga spesialnya sendiri — tinggal pilih, konsultasi, langsung diproses.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="promo-grid">
+
+        <!-- PROMO 1 -->
+        <div class="promo-card">
+            <div class="promo-poster-wrap">
+                <span class="promo-badge">Hemat 20%</span>
+                <!-- Ganti src dengan gambar poster promo Kaos Kelas -->
+                <img src="Mulai RP. 65.000 (1).png" alt="Promo Kaos Kelas TenX Apparel" class="promo-poster">
+            </div>
+            <div class="promo-body">
+                <h3>Paket Kaos Standar</h3>
+                <p class="promo-price"><span class="old">Rp45000</span>Mulai Rp38000</p>
+                <ul class="benefit-list">
+                    <li>Free desain & free revisi unlimited</li>
+                    <li>Free Ongkir (Seluruh Pulau Jawa)</li>
+                    <li>Free Free bendera Kelas (Min order 12 Pcs)</li>
+                    <li>Free +1 Pcs Setiap Pembelian 24 Pcs (Berlaku Kelipatan)</li>
+                </ul>
+                <a class="katalog-cta" href="DAFTAR HARGA KAOS STANDART.pdf" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 1.5L18.5 8H14V3.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h5v1.5H8V10z"/></svg>
+                    Lihat Katalog Harga
+                </a>
+                <a class="promo-cta" href="https://wa.me/6285729008192?text=Konsultasikan%20sekarang%20-%20Paket%20Kaos%20Kelas" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.78-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+                    Konsultasikan Sekarang
+                </a>
+            </div>
+        </div>
+        <!-- PROMO 4 -->
+        <div class="promo-card">
+            <div class="promo-poster-wrap">
+                <span class="promo-badge">Promo Sekolah</span>
+                <!-- Ganti src dengan gambar poster promo PDH/PDL -->
+                <img src="PDH PAKET.png" alt="Promo PDH PDL TenX Apparel" class="promo-poster">
+            </div>
+            <div class="promo-body">
+                <h3>Paket PDH/PDL Organisasi</h3>
+                <p class="promo-price"><span class="old">Rp150.000</span>Mulai Rp115.000/pcs</p>
+                <ul class="benefit-list">
+                    <li>Free Desain</li>
+                    <li>Free Revisi Desain Sepuasnya</li>
+                    <li>Free Ongkir (Seluruh Pulau Jawa)</li>
+                    <li>Free Lanyard + Id card (min order 12 Pcs)</li>
+                    <li>Free Bonus 1 Pcs Setiap Order 50pcs (Berlaku Kelipatan) </li>
+                </ul>
+                <a class="katalog-cta" href="DAFTAR HARGA PDH.pdf" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 1.5L18.5 8H14V3.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h5v1.5H8V10z"/></svg>
+                    Lihat Katalog Harga
+                </a>
+                <a class="promo-cta" href="https://wa.me/6285729008192?text=Konsultasikan%20sekarang%20-%20Paket%20PDH%20PDL" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.78-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+                    Konsultasikan Sekarang
+                </a>
+            </div>
+        </div>
+
+        <!-- PROMO 5 -->
+        <div class="promo-card">
+            <div class="promo-poster-wrap">
+                <span class="promo-badge">Eksklusif</span>
+                <!-- Ganti src dengan gambar poster promo Workshirt -->
+                <img src="WORK PAKET.png" alt="Promo Workshirt TenX Apparel" class="promo-poster">
+            </div>
+            <div class="promo-body">
+                <h3>Paket Workshirt Komunitas</h3>
+                <p class="promo-price"><span class="old">Rp105.000</span>Mulai Rp100.000/pcs</p>
+                <ul class="benefit-list">
+                    <li>Free Desain</li>
+                    <li>Free Revisi Desain Sepuasny</li>
+                    <li>Free Ongkir (Seluruh Pulau Jawa)</li>
+                    <li>Free Lanyard + Id card (min order 12 Pcs)</li>
+                    <li>Free Bonus 1 Pcs Setiap Order 50pcs (Berlaku Kelipatan)</li>
+                </ul>
+                <a class="katalog-cta" href="DAFTAR HARGA WORKSHIRT.pdf" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 1.5L18.5 8H14V3.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h5v1.5H8V10z"/></svg>
+                    Lihat Katalog Harga
+                </a>
+                <a class="promo-cta" href="https://wa.me/6285729008192?text=Konsultasikan%20sekarang%20-%20Paket%20Workshirt%20Komunitas" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.78-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+                    Konsultasikan Sekarang
+                </a>
+            </div>
+        </div>
+
+        <!-- PROMO 6 -->
+        <div class="promo-card">
+            <div class="promo-poster-wrap">
+                <span class="promo-badge">Kaos Sablon Menyala</span>
+                <!-- Ganti src dengan gambar poster promo Jas Almamater -->
+                <img src="KAOS PREMIUM.png" alt="Promo Jas Almamater TenX Apparel" class="promo-poster">
+            </div>
+            <div class="promo-body">
+                <h3>Paket Kaos Premium</h3>
+                <p class="promo-price"><span class="old">Rp90.000</span>Mulai Rp60.000/pcs</p>
+                <ul class="benefit-list">
+                    <li>Free Desain</li>
+                    <li>Free Revisi Desain Sepuasnya</li>
+                    <li>Free Ongkir (seluruh pulau jawa)</li>
+                    <li>Free Bendera Angkatan (Min order 12)</li>
+                    <li>Free Bonus 1 pcs setiap pesanan 24pcs (berlaku kelipatan)</li>
+                </ul>
+                <a class="katalog-cta" href="DAFTAR HARGA KAOS PREMIUM WELL.pdf" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 1.5L18.5 8H14V3.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h5v1.5H8V10z"/></svg>
+                    Lihat Katalog Harga
+                </a>
+                <a class="promo-cta" href="https://wa.me/6285729008192?text=Konsultasikan%20sekarang%20-%20Paket%20Jas%20Almamater" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.78-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+                    Konsultasikan Sekarang
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="promo-footer-cta">
+    <div class="container">
+        <h2>BELUM NEMU YANG <span>PAS?</span></h2>
+        <p>Ceritain aja kebutuhan kelas, tim, atau organisasi kamu. Tim TenX bantu rekomendasiin paket dan harga terbaik.</p>
+        <div class="cta-btn-row">
+            <a class="promo-cta" href="https://wa.me/6285729008192?text=Konsultasikan%20sekarang" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.78-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+                Konsultasikan Sekarang
+            </a>
+            <a class="portfolio-cta" href="PORTOFOLIO TENX APPAREL.pdf" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 1.5L18.5 8H14V3.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h5v1.5H8V10z"/></svg>
+                Lihat Portofolio
+            </a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
