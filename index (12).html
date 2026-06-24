@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TENX APPAREL - Vendor Kaos & Apparel Custom Termurah Cilacap | Kelas, Angkatan, Event</title>
+    <meta name="description" content="TENX APPAREL adalah vendor kaos dan apparel custom no-1 di Cilacap. Spesialis kaos kelas, kaos angkatan, dan kaos event dengan harga termurah dan kualitas premium. Everyone can wear luxury fashion.">
+    <meta name="keywords" content="vendor kaos kelas terdekat, vendor kaos angkatan termurah, vendor kaos event termurah, vendor apparel cilacap, konveksi kaos cilacap, kaos custom cilacap">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.tenxapparel.site/">
+
+    <!-- Open Graph (untuk preview saat dibagikan di WA/FB/dll) -->
+    <meta property="og:title" content="TENX APPAREL - Vendor Kaos & Apparel Custom Termurah Cilacap">
+    <meta property="og:description" content="Vendor kaos kelas, angkatan, dan event termurah di Cilacap. Everyone Can Wear Luxury Fashion.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.tenxapparel.site/logo_tenx.png">
+    <meta property="og:url" content="https://www.tenxapparel.site/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #FFFFFF;
+            --accent: #D62828;
+            --highlight: #F25F5C;
+            --light-bg: #F8F9FA;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--secondary);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Special Offer nav button */
+        .nav-offer-btn {
+            background-color: var(--accent) !important;
+            color: var(--secondary) !important;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 14px !important;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            transition: all 0.3s;
+            animation: offerPulse 2.4s infinite;
+        }
+        .nav-offer-btn:hover {
+            background-color: transparent !important;
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+        @keyframes offerPulse {
+            0%   { box-shadow: 0 0 0 0 rgba(214,40,40,0.5); }
+            70%  { box-shadow: 0 0 0 8px rgba(214,40,40,0); }
+            100% { box-shadow: 0 0 0 0 rgba(214,40,40,0); }
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bf340bb4-5554-465e-82b1-360b882ec208.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--secondary);
+            max-width: 600px;
+        }
+        
+        .hero-content h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        
+        .hero-content .highlight {
+            color: var(--accent);
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--secondary);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 2px solid var(--accent);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent);
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .cta-button-outline {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .cta-button-outline:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border-color: var(--secondary);
+        }
+        
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin: 80px 0 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            font-weight: 800;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .category-card {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--secondary);
+        }
+        
+        .category-overlay h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .category-overlay a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .category-overlay a::after {
+            content: '→';
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .category-overlay a:hover::after {
+            transform: translateX(5px);
+        }
+        
+        /* Featured Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .product-card {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .product-info .price {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .product-info .category {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        .add-to-cart {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--secondary);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background-color: var(--primary);
+        }
+        
+        /* About Section */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .about-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .about-content {
+            padding-right: 40px;
+        }
+        
+        .about-content h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        /* ===== OUR CLIENTS CAROUSEL ===== */
+        .clients-section {
+            padding: 60px 0 70px;
+            background: #f8f9fa;
+            overflow: hidden;
+        }
+
+        .clients-section .section-title {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .clients-subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        .clients-track-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        }
+
+        .clients-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: clientsScroll 32s linear infinite;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .clients-track:active {
+            cursor: grabbing;
+        }
+
+        .clients-track.paused {
+            animation-play-state: paused;
+        }
+
+        @keyframes clientsScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .client-card {
+            flex: 0 0 auto;
+            width: 160px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 22px 16px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .client-logo-wrap {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .client-logo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .client-initial {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .client-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .ci-red    { background: linear-gradient(135deg,#D62828,#f25f5c); }
+        .ci-blue   { background: linear-gradient(135deg,#185FA5,#378ADD); }
+        .ci-green  { background: linear-gradient(135deg,#3B6D11,#639922); }
+        .ci-amber  { background: linear-gradient(135deg,#854F0B,#BA7517); }
+        .ci-purple { background: linear-gradient(135deg,#534AB7,#7F77DD); }
+        .ci-teal   { background: linear-gradient(135deg,#0F6E56,#1D9E75); }
+        .ci-coral  { background: linear-gradient(135deg,#993C1D,#D85A30); }
+        .ci-pink   { background: linear-gradient(135deg,#993556,#D4537E); }
+        .ci-navy   { background: linear-gradient(135deg,#042C53,#185FA5); }
+        .ci-dark   { background: linear-gradient(135deg,#2C2C2A,#5F5E5A); }
+        .ci-maroon { background: linear-gradient(135deg,#501313,#A32D2D); }
+
+        @media (max-width: 768px) {
+            .client-card { width: 130px; padding: 18px 12px 14px; }
+            .client-initial, .client-logo-wrap { width: 52px; height: 52px; border-radius: 10px; font-size: 16px; }
+            .clients-track { gap: 16px; }
+            @keyframes clientsScroll {
+                0%   { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+        }
+        /* ===== END OUR CLIENTS ===== */
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-bg);
+            padding: 80px 0;
+            margin-bottom: 80px;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item i {
+            color: var(--accent);
+            font-size: 20px;
+        }
+        
+        .contact-form {
+            background-color: var(--secondary);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-map {
+            position: relative;
+            min-height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            text-decoration: none;
+        }
+
+        .map-link iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+        }
+
+        .map-overlay {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+            color: var(--secondary);
+            padding: 30px 20px 16px;
+            font-weight: 700;
+            font-size: 15px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .map-link:hover .map-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(214,40,40,0.85) 100%);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--accent);
+            color: var(--secondary);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--secondary);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 48px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        /* --- Added animations & responsive tweaks --- */
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+        .hero-content h1, .hero-content p, .hero-content .cta-button {
+            opacity: 0; transform: translateY(30px); transition: all 0.8s ease;
+        }
+        .hero-content.show h1 { transition-delay: 0.18s; opacity: 1; transform: translateY(0); }
+        .hero-content.show p { transition-delay: 0.36s; opacity: 1; transform: translateY(0); }
+        .hero-content.show .cta-button { transition-delay: 0.54s; opacity: 1; transform: translateY(0); }
+
+        .menu-toggle { display: none; cursor: pointer; user-select: none; }
+        .nav-links { gap: 24px; }
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links { display: none; position: absolute; top: 68px; right: 18px; background: var(--secondary); flex-direction: column; width: 220px; border-radius: 8px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); align-items: stretch; }
+            .nav-links.show { display: flex; }
+            .nav-links a { padding: 10px 6px; border-radius: 6px; }
+            .nav-offer-btn { text-align: center; margin-top: 4px; }
+            .hero-content h1 { font-size: 36px; }
+            .hero-content p { font-size: 15px; }
+            .category-img, .product-img { height: 220px; }
+            .about-img { height: 260px; }
+            .container { padding: 0 15px; }
+            .contact-container { grid-template-columns: 1fr; gap: 20px; }
+            .contact-form, .contact-info { width: 100%; }
+            input, textarea, button, .cta-button { width: 100%; box-sizing: border-box; }
+        }
+
+        /* ===== WhatsApp Floating Button ===== */
+        .wa-float {
+            position: fixed;
+            bottom: 28px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        .wa-tooltip {
+            background: #25D366;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            box-shadow: 0 4px 14px rgba(37,211,102,0.35);
+        }
+        .wa-tooltip.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .wa-btn {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+        }
+        .wa-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+        }
+        .wa-btn svg {
+            width: 32px;
+            height: 32px;
+            fill: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        .wa-pulse {
+            position: absolute;
+            top: 0; left: 0;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: rgba(37,211,102,0.4);
+            animation: wa-pulse-anim 2s infinite;
+        }
+        @keyframes wa-pulse-anim {
+            0%   { transform: scale(1);    opacity: 0.7; }
+            70%  { transform: scale(1.55); opacity: 0; }
+            100% { transform: scale(1.55); opacity: 0; }
+        }
+        @media (max-width: 768px) {
+            .wa-float { bottom: 20px; right: 16px; }
+            .wa-btn { width: 52px; height: 52px; }
+            .wa-pulse { width: 52px; height: 52px; }
+            .wa-btn svg { width: 28px; height: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">TEN<span>X</span></div>
+            <div class="menu-toggle" aria-label="Menu" role="button">☰</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Produk</a>
+                <a href="#about">Tentang</a>
+                <a href="#contact">Kontak</a>
+                <a href="promo.html" class="nav-offer-btn">🔥 Special Offer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1><span class="highlight">TENX</span> APPAREL</h1>
+                <p>TenX Apparel tuh bukan sekadar tempat bikin kaos tetapi
+tempat kita ngumpulin kenangan bareng kelas, tim, dan komunitas
+yang terekspresi dalam Kaos kelas, jersey tim, varsity, PDH, workshirt bahkan ada juga loh bonusnyaa.
+Apa aja sih Bonusnya?
+✔️ Free desain
+✔️ Free revisi
+✔️ Free bendera & stiker
+✔️ Free 1 pcs buat wali kelas/ketua geng 😜
+Pokoknya, #CustomTanpaRibet cuma di TenX!
+
+</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="cta-button">Explor Koleksi</a>
+                    <a href="partner-tenx.html" class="cta-button cta-button-outline">🤝 Partner TenX</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container" id="products">
+        <div class="section-title">
+            <h2>KATEGORI PRODUK</h2>
+        </div>
+        <div class="categories">
+            <div class="category-card">
+                <img src="WORKSHIRT.jpeg" alt="Workshirt premium dengan desain minimalis dan potongan modern untuk gaya urban" class="category-img">
+                <div class="category-overlay">
+                    <h3>Workshirt Kostum</h3>
+                    <p>Di balik setiap bordiran dan jahitan workshirt ini,
+ada harapan, kerja keras, dan rasa bangga jadi bagian dari tim , komunitas ataupun organisasi.
+
+TenX Apparel hadir bukan cuma buat bikin seragam,
+tapi buat ngikat rasa yang nggak bisa diganti —
+solidaritas.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf">Lihat Koleksi</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="nyablon.jpeg" alt="Kaos kelas dengan desain bold dan warna vibrant untuk identitas yang kuat" class="category-img">
+                <div class="category-overlay">
+                    <h3>Kaos Kostum</h3>
+                    <p>Satu desain, seribu kenangan.
+Kaos custom dari TenX bukan cuma soal gaya,
+tapi soal cerita yang hanya dimengerti sama mereka yang pernah ada di dalamnya.
+TenX hadir untuk bantu kamu simpan cerita itu… dalam bentuk kaos. 👕</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf">Lihat Koleksi</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="SMANSABA 2.jpeg" alt="Seragam sekolah trendi dengan bahan nyaman dan desain modern" class="category-img">
+                <div class="category-overlay">
+                    <h3>Jersey Kostum</h3>
+                    <p>Kita pernah satu tim,
+pernah pakai jersey yang sama,
+berlari, jatuh, teriak bareng,
+bukan cuma ngejar poin… tapi juga kebanggaan.
+Mungkin nanti lapangannya beda, orang-orangnya ganti,
+tapi jersey ini akan selalu jadi saksi
+bahwa kita pernah berjuang bareng.
+TenX bangga jadi bagian dari tiap peluh dan tawa kalian —
+karena setiap jersey punya cerita.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf">Lihat Koleksi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container">
+        <div class="section-title">
+            <h2>PRODUK UNGGULAN</h2>
+        </div>
+        <div class="products">
+            <div class="product-card fade-in-up">
+                <img src="WORKSHIRT.jpeg" alt="Workshirt premium dengan detail jahitan merah dan logo TENX di dada" class="product-img">
+                <div class="product-info">
+                    <span class="category">Workshirt</span>
+                    <h3>WORKSHIRT</h3>
+                    <p>Bukan cuma seragam kerja,
+ini simbol kebersamaan dan semangat satu tujuan.
+TenX hadir buat setiap langkah tim kamu.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf" class="add-to-cart">LIHAT PORTOFOLIO SEKARANG</a>
+                </div>
+            </div>
+            <div class="product-card fade-in-up">
+                <img src="KAOS OSIS.jpeg" alt="Kaos kelas dengan desain bold typography dan warna kontras hitam-merah" class="product-img">
+                <div class="product-info">
+                    <span class="category">Kaos Kelas</span>
+                    <h3>KAOS KELAS</h3>
+                    <p>Kita mungkin beda jalan nanti,
+tapi kaos ini bakal selalu jadi pengingat
+kalau pernah ada masa kita satu tawa, satu cerita.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf" class="add-to-cart">LIHAT PORTOFOLIO SEKARANG</a>
+                </div>
+            </div>
+            <div class="product-card fade-in-up">
+                <img src="SMANSABA 1.jpeg" alt="Seragam olahraga sekolah dengan garis-garis merah di bagian lengan" class="product-img">
+                <div class="product-info">
+                    <span class="category">Seragam Olahraga</span>
+                    <h3>Jersey</h3>
+                    <p>Jersey ini saksi bisu perjuangan kita.
+Menang, kalah, jatuh, bangkit —
+semua kita hadapi bareng, sebagai satu tim.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf" class="add-to-cart">LIHAT PORTOFOLIO SEKARANG</a>
+                </div>
+            </div>
+            <div class="product-card fade-in-up">
+                <img src="jas osis.jpeg" alt="Kemeja PDH dengan saku dada dan logo TENX yang elegan" class="product-img">
+                <div class="product-info">
+                    <span class="category">JAS ALMAMATER</span>
+                    <h3>JAS ALMAMATER</h3>
+                    <p>Dipakai saat bangga, dilepas saat lulus.
+Tapi kenangannya akan selalu nempel.
+Jas ini bukan cuma simbol kampus,
+tapi rumah dari ribuan mimpi.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf" class="add-to-cart">LIHAT PORTOFOLIO SEKARANG</a>
+                </div>
+            </div>
+            <div class="product-card fade-in-up">
+                <img src="PDH TERBARU.jpeg" alt="Kemeja PDH dengan saku dada dan logo TENX yang elegan" class="product-img">
+                <div class="product-info">
+                    <span class="category">Kemeja PDH</span>
+                    <h3>PDH/PDL</h3>
+                    <p>PDH ini bukan cuma seragam organisasi,
+tapi identitas.
+Lambang tanggung jawab, kebanggaan, dan solidaritas.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf" class="add-to-cart">LIHAT PORTOFOLIO SEKARANG</a>
+                </div>
+            </div>
+            <div class="product-card fade-in-up">
+                <img src="VARSITY.jpeg" alt="Seragam olahraga sekolah dengan garis-garis merah di bagian lengan" class="product-img">
+                <div class="product-info">
+                    <span class="category">VARSITY</span>
+                    <h3>VARSITY</h3>
+                    <p>Varsity ini bukan sekadar jaket.
+Ini lambang identitas dan kebanggaan.
+Tentang proses tumbuh bareng—dari gagal, belajar, sampai bisa berdiri sebagai satu tim.
+Setiap jahitan punya cerita, setiap bordiran punya makna.
+Mungkin suatu hari kita akan melepasnya,
+tapi rasa jadi bagian dari sesuatu yang besar…
+nggak akan pernah hilang.
+Dan TenX bangga pernah jadi bagian dari kisah itu.</p>
+                    <a href="PORTOFOLIO TENX APPAREL.pdf" class="add-to-cart">LIHAT PORTOFOLIO SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="about">
+        <div class="section-title">
+            <h2>TENTANG KAMI</h2>
+        </div>
+        <div class="about">
+            <div>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/69df1e50-8371-4da1-824a-ae9152a7efaa.png" alt="Studio produksi TENX APPAREL dengan suasana urban dan kreatif" class="about-img">
+            </div>
+            <div class="about-content">
+                <h2>TENX APPAREL - Apparel kostum NO.1 DI INDONESIA</h2>
+                <p>TENX APPAREL lahir dari kecintaan terhadap fashion yang tidak hanya stylish tapi juga berkualitas tinggi. Kami percaya bahwa apparel bukan sekadar pakaian, tapi ekspresi identitas.</p>
+                <p>Bukan hanya brand & desain. Tetapi kami menghadirkan tempat untuk kalian untuk mengekspresikan diri kalian</p>
+                <p>Dengan harga terjangkau sudah bisa mendapatkan bahan pilihan, jahitan rapi, dan desain yang selalu up-to-date dengan tren terkini membuat setiap produk TENX layak menjadi bagian dari gaya harian Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OUR CLIENTS SECTION ===== -->
+    <section class="clients-section">
+        <div class="section-title">
+            <h2>OUR CLIENTS</h2>
+        </div>
+        <p class="clients-subtitle">Dipercaya oleh berbagai instansi, sekolah, dan perusahaan terkemuka</p>
+
+        <div class="clients-track-wrapper" id="clientsWrapper">
+            <div class="clients-track" id="clientsTrack">
+
+                <div class="client-card">
+                   <img src="CILACAP.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Kec. Kawunganten, Kab. Cilacap</span>
+                </div>
+                <div class="client-card">
+                  <img src="PERTAMINA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Pertamina</span>
+                </div>
+                <div class="client-card">
+                  <img src="logo anugrah computer.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Computer</span>
+                </div>
+                <div class="client-card">
+                  <img src="logo anugrah sound.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Soundsystem</span>
+                </div>
+                <div class="client-card">
+                 <img src="ANUGRAH MUSIK.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Musik</span>
+                </div>
+                <div class="client-card">
+                 <img src="DUNEX.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Dunia Express Transindo</span>
+                </div>
+                <div class="client-card">
+                <img src="SPPG.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SPPG</span>
+                </div>
+                <div class="client-card">
+                    <img src="UI.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Universitas Indonesia</span>
+                </div>
+                <div class="client-card">
+                <img src="SMK TI.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Tarbiyatul Islam Kawunganten</span>
+                </div>
+                <div class="client-card">
+                  <img src="SMANSABA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMA Negeri 1 Bantarsari</span>
+                </div>
+                <div class="client-card">
+                <img src="YAYASAN BUDUT.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Boedi Utomo Cilacap</span>
+                </div>
+
+                <div class="client-card">
+               <img src="CILACAP.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Kec. Kawunganten, Kab. Cilacap</span>
+                </div>
+                <div class="client-card">
+                <img src="PERTAMINA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Pertamina</span>
+                </div>
+                <div class="client-card">
+                <img src="logo anugrah computer.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Computer</span>
+                </div>
+                <div class="client-card">
+                <img src="logo anugrah sound.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Soundsystem</span>
+                </div>
+                <div class="client-card">
+                 <img src="ANUGRAH MUSIK.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Anugrah Musik</span>
+                </div>
+                <div class="client-card">
+                 <img src="DUNEX.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">PT. Dunia Express Transindo</span>
+                </div>
+                <div class="client-card">
+               <img src="SPPG.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SPPG</span>
+                </div>
+                <div class="client-card">
+                <img src="UI.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">Universitas Indonesia</span>
+                </div>
+                <div class="client-card">
+               <img src="SMK TI.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Tarbiyatul Islam Kawunganten</span>
+                </div>
+                <div class="client-card">
+                 <img src="SMANSABA.png" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMA Negeri 1 Bantarsari</span>
+                </div>
+                <div class="client-card">
+               <img src="YAYASAN BUDUT.jpg" style="width:64px;height:64px;object-fit:contain;">
+                    <span class="client-name">SMK Boedi Utomo Cilacap</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===== END OUR CLIENTS ===== -->
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h3>Hubungi Kami</h3>
+                <p>Untuk pemesanan custom, kolaborasi, atau pertanyaan lainnya, silakan hubungi kami melalui form kontak atau langsung ke kontak yang tersedia.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i>📍</i>
+                        <span>Dusun Sidasari , Desa Bulaksari , Kec.Bantarsari , Kab.cilacap , Jawa tengah</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📞</i>
+                        <span>085729008192</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>✉️</i>
+                        <span>tenxofficial@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>🕒</i>
+                        <span>Oprasional Produksi : 08.00-23.00</span>
+                        <span>Oprasional admin : 09.00-22.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-map">
+                <a href="https://share.google/JRFPdKcgVHHkKdMk1" target="_blank" rel="noopener noreferrer" class="map-link">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Workshop%20TenX%20Apparel&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-overlay">
+                        <span>📍 Lihat Lokasi Workshop di Google Maps</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>TENX APPAREL</h3>
+                    <p>Brand apparel premium untuk kalangan muda dengan kualitas tinggi dan desain anak muda yang fresh.</p>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@tenxofficial_"><i>📷</i></a>
+                        <a href="https://www.tiktok.com/@tenxofficial_"><i>🎵</i></a>
+                        <a href="PORTOFOLIO TENX APPAREL.pdf"><i>💻</i></a>
+                        <a href="https://shopee.co.id/tenxofficial_"><i>🛒</i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="#">Workshirt</a></li>
+                        <li><a href="#">Kaos Kelas</a></li>
+                        <li><a href="#">Seragam Sekolah</a></li>
+                        <li><a href="#">Kemeja PDH</a></li>
+                        <li><a href="#">Seragam Olahraga</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="PORTOFOLIO TENX APPAREL.pdf">Produk</a></li>
+                        <li><a href="PORTOFOLIO TENX APPAREL.pdf">Tentang Kami</a></li>
+                        <li><a href="https://wa.me/6285729008192?text=HALO%20MIN%20TENX">Kontak</a></li>
+                        <li><a href="https://wa.me/6285729008192?text=HALO%20MIN%20TENX">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Kebijakan</h3>
+                    <ul>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="Hijau Cokelat dan Oranye Modern Informasi dan Disinformasi Presentasi.png">Kebijakan Pengembalian</a></li>
+                        <li><a href="BELANJA TENANG DENGAN TENX APPAREL.png">Pengiriman</a></li>
+                        <li><a href="REKENING PEMBAYARAN.png">Pembayaran</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 TENX APPAREL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WhatsApp Floating Button ===== -->
+    <div class="wa-float" id="waFloat">
+        <div class="wa-tooltip" id="waTooltip">Chat kami di WhatsApp!</div>
+        <a class="wa-btn" id="waBtn"
+           href="https://wa.me/6285729008192?text=HALO%20MIN%20TENX"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Chat via WhatsApp">
+            <span class="wa-pulse" aria-hidden="true"></span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.78-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hero = document.querySelector('.hero-content');
+        if (hero) {
+            setTimeout(() => { hero.classList.add('show'); }, 300);
+        }
+
+        const revealElements = document.querySelectorAll('.fade-in-up, .section-title');
+        const revealOnScroll = () => {
+            const triggerBottom = window.innerHeight * 0.85;
+            revealElements.forEach(el => {
+                const boxTop = el.getBoundingClientRect().top;
+                if (boxTop < triggerBottom) el.classList.add('visible');
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            const img = card.querySelector('.product-img');
+            if (!img) return;
+            card.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.06)'; img.style.transition = 'transform 0.4s ease'; });
+            card.addEventListener('mouseleave', () => { img.style.transform = 'scale(1)'; });
+        });
+        document.querySelectorAll('.category-card').forEach(card => {
+            const img = card.querySelector('.category-img');
+            if (!img) return;
+            card.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.06)'; img.style.transition = 'transform 0.5s ease'; });
+            card.addEventListener('mouseleave', () => { img.style.transform = 'scale(1)'; });
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const y = target.getBoundingClientRect().top + window.pageYOffset - 70;
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                        if (navLinks) navLinks.classList.remove('show');
+                    }
+                }
+            });
+        });
+
+        if (menuToggle) {
+            menuToggle.setAttribute('tabindex', '0');
+            menuToggle.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    navLinks.classList.toggle('show');
+                }
+            });
+        }
+
+        const waBtn = document.getElementById('waBtn');
+        const waTooltip = document.getElementById('waTooltip');
+        if (waBtn && waTooltip) {
+            waBtn.addEventListener('mouseenter', () => waTooltip.classList.add('show'));
+            waBtn.addEventListener('mouseleave', () => waTooltip.classList.remove('show'));
+            setTimeout(() => {
+                waTooltip.classList.add('show');
+                setTimeout(() => waTooltip.classList.remove('show'), 3000);
+            }, 2000);
+        }
+
+        const track = document.getElementById('clientsTrack');
+        if (track) {
+            track.addEventListener('mouseenter', () => track.classList.add('paused'));
+            track.addEventListener('mouseleave', () => { if (!isDragging) track.classList.remove('paused'); });
+
+            let isDragging = false, startX = 0, scrollLeft = 0, dragOffset = 0;
+
+            track.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                dragOffset = 0;
+                track.classList.add('paused');
+                track.style.animationPlayState = 'paused';
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                dragOffset = e.clientX - startX;
+                track.style.setProperty('--drag-x', dragOffset + 'px');
+            });
+            document.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                track.classList.remove('paused');
+                track.style.setProperty('--drag-x', '0px');
+            });
+
+            let touchStartX = 0;
+            track.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                track.classList.add('paused');
+            }, { passive: true });
+            track.addEventListener('touchmove', (e) => {
+                const diff = e.touches[0].clientX - touchStartX;
+                track.style.setProperty('--drag-x', diff + 'px');
+            }, { passive: true });
+            track.addEventListener('touchend', () => {
+                track.classList.remove('paused');
+                track.style.setProperty('--drag-x', '0px');
+            });
+        }
+    });
+    </script>
+
+</body>
+</html>
